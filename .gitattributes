@@ -1,0 +1,1 @@
+dataset/household_power_consumption.txt filter=lfs diff=lfs merge=lfs -text
