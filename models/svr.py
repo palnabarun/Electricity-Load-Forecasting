@@ -1,3 +1,4 @@
+from sklearn.svm import SVR
 from svmutil import *
 
 def svrtrain(x, y, cost, kernel_select=2):
@@ -9,3 +10,11 @@ def svrtrain(x, y, cost, kernel_select=2):
 def svrpredict(x, y, model):
     predicted, acc, _ = svm_predict(y, x, model)
     return [predicted, acc]
+
+def svrtrainsk(x, y, cost=1.0, epsilon=0.1):
+    model = SVR(C=cost, epsilon=epsilon)
+    model.fit(x, y)
+    return model
+
+def svrpredictsk(x):
+    return model.predict(x)
