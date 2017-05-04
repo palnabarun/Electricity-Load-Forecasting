@@ -3,7 +3,7 @@ import time
 import csv
 import os
 
-source = "..\\datasets\\household_power_consumption.txt"
+source = "..\\dataset\\household_power_consumption.txt"
 
 def consume_data():
     with open(source) as f:
